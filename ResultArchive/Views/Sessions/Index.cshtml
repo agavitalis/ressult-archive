@@ -1,0 +1,99 @@
+﻿@model IEnumerable<ResultArchive.Models.Session>
+
+@section Styles {
+    <!-- DataTables -->
+    <link href="~/assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Responsive datatable examples -->
+    <link href="~/assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+}
+
+@section LeftSidebar {
+    <partial name="~/Views/Partials/_Sidebar.cshtml" />
+}
+<!-- Page Content-->
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="mt-0 header-title">Manage Sessions</h4>
+                        <p class="text-muted mb-4 font-13">
+                            These are sessions registered in the result archive
+                        </p>
+
+                        <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Session Name</th>
+                                    <th>Comments</th>
+                                    <th>Actions</th>
+
+                                </tr>
+                            </thead>
+                            @{
+                                var counter = 1;
+                            }
+
+                            <tbody>
+                                @foreach (var session in Model)
+                                {
+                                    <tr>
+                                        <td>@counter</td>
+                                        <td>@Html.DisplayFor(m => session.Name)</td>
+                                        <td>@Html.DisplayFor(m => session.Comments)</td>
+                                        <td style="text-align:center;">
+                                            <a href="@Url.Action("Edit", "Sessions", new { Id = session.Id })" class=""><i class="fas fa-edit text-success"></i></a>
+                                            <a href="@Url.Action("Delete", "Sessions", new { Id = session.Id })" class=""><i class="fas fa-trash-alt text-danger ml-2"></i></a>
+                                        </td>
+
+                                    </tr>
+
+                                    counter++;
+
+                                }
+
+                            </tbody>
+
+
+                        </table>
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+
+
+
+    </div><!-- container -->
+
+    <partial name="~/Views/Partials/_Footer.cshtml" />
+</div>
+<!-- end page content -->
+@section Scripts {
+
+    <!-- Required datatable js -->
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="~/assets/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="~/assets/plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables/jszip.min.js"></script>
+    <script src="~/assets/plugins/datatables/pdfmake.min.js"></script>
+    <script src="~/assets/plugins/datatables/vfs_fonts.js"></script>
+    <script src="~/assets/plugins/datatables/buttons.html5.min.js"></script>
+    <script src="~/assets/plugins/datatables/buttons.print.min.js"></script>
+    <script src="~/assets/plugins/datatables/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="~/assets/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="~/assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="~/assets/pages/jquery.datatable.init.js"></script>
+
+}

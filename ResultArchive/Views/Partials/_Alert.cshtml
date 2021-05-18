@@ -1,0 +1,79 @@
+﻿
+@if (TempData["Success"] != null)
+{
+    <div class="col-lg-12">
+        <div class="alert alert-outline-success alert-success-shadow mb-0 alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+            </button>
+            <i class="mdi mdi-check-all alert-icon"></i>
+            <strong>Yap!</strong> @TempData["Success"]
+        </div>
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="col-lg-12">
+        <div class="alert alert-outline-danger alert-danger-shadow mb-0 alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+            </button>
+            <i class="mdi mdi-check-all alert-icon"></i>
+            <strong>Yap!</strong>@TempData["Error"]
+        </div>
+    </div>
+}
+
+@if (TempData["Warning"] != null)
+{
+    <div class="col-lg-12">
+        <div class="alert alert-outline-warning alert-warning-shadow mb-0 alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+            </button>
+            <i class="mdi mdi-check-all alert-icon"></i>
+            <strong>Yap!</strong> @TempData["Warning"]
+        </div>
+    </div>
+}
+
+
+@if (ViewBag.Success != null)
+{
+    <div class="col-lg-12">
+        <div class="alert alert-outline-success alert-success-shadow mb-0 alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+            </button>
+            <i class="mdi mdi-check-all alert-icon"></i>
+            <strong>Yap!</strong> @ViewBag.Success
+        </div>
+    </div>
+}
+
+@if (ViewBag.Error != null)
+{
+    <div class="col-lg-12">
+        <div class="alert alert-outline-danger alert-danger-shadow mb-0 alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+            </button>
+            <i class="mdi mdi-check-all alert-icon"></i>
+            <strong>Yap!</strong>@ViewBag.Error
+        </div>
+    </div>
+}
+
+@if(ViewBag.Warning != null)
+{
+    <div class="col-lg-12">
+        <div class="alert alert-outline-warning alert-warning-shadow mb-0 alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+            </button>
+            <i class="mdi mdi-check-all alert-icon"></i>
+            <strong>Yap!</strong> @ViewBag.Warning
+        </div>
+    </div>
+}

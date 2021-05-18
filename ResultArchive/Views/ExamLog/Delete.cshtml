@@ -1,0 +1,296 @@
+﻿
+@model ResultArchive.Models.ExamLog
+
+@section LeftSidebar {
+    <partial name="~/Views/Partials/_Sidebar.cshtml" />
+}
+<!-- Page Content-->
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="mt-0 header-title">Delete Log</h4>
+                        <p class="text-muted mb-4">
+                            Here you delete <code class="highlighter-rouge">Exam Logs</code> registered in this system.
+                        </p>
+
+                        <form method="post">
+                            <div class="row">
+                                <input type="hidden" asp-for="Id" />
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">SN</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="SN" placeholder="FirstName">
+                                            <span asp-validation-for="SN" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Jamb No</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Jamb_No" placeholder="Jamb No">
+                                            <span asp-validation-for="Jamb_No" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Subject</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Subject" placeholder="Subject">
+                                            <span asp-validation-for="Subject" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Refrence Text</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Refrence_Text" placeholder="Refrence_Text">
+                                            <span asp-validation-for="Refrence_Text" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Refrence Image</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Refrence_Image" placeholder="CVScore">
+                                            <span asp-validation-for="Refrence_Image" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Question</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Question" placeholder="Question">
+                                            <span asp-validation-for="Question" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Option A</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Option_A" placeholder="Option A">
+                                            <span asp-validation-for="Option_A" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Option B</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Option_B" placeholder="Option B">
+                                            <span asp-validation-for="Option_B" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Option C</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Option_C" placeholder="Option C">
+                                            <span asp-validation-for="Option_C" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Option D</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Option_D" placeholder="Option D">
+                                            <span asp-validation-for="Option_D" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Option E</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Option_E" placeholder="Option D">
+                                            <span asp-validation-for="Option_E" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Answer Choice</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Answer_Choice" placeholder="Answer Choice">
+                                            <span asp-validation-for="Answer_Choice" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Answer Point</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Answer_Point" placeholder="Answer Point">
+                                            <span asp-validation-for="Answer_Point" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Option_A_Choice</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Option_A_Choice" placeholder="Option_A_Choice">
+                                            <span asp-validation-for="Option_A_Choice" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Option_B_Choice</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Option_B_Choice" placeholder="Option_B_Choice">
+                                            <span asp-validation-for="Option_B_Choice" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Option_C_Choice</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Option_C_Choice" placeholder="Option_C_Choice">
+                                            <span asp-validation-for="Option_C_Choice" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Option_D_Choice</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Option_D_Choice" placeholder="Option_D_Choice">
+                                            <span asp-validation-for="Option_D_Choice" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Option_E_Choice</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Option_E_Choice" placeholder="Option_E_Choice">
+                                            <span asp-validation-for="Option_E_Choice" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Is_Bonus</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Is_Bonus" placeholder="Is_Bonus">
+                                            <span asp-validation-for="Is_Bonus" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Is_Option_Image</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Is_Option_Image" placeholder="Is_Option_Image">
+                                            <span asp-validation-for="Is_Option_Image" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Ans_From_Student</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Ans_From_Student" placeholder="Ans_From_Student">
+                                            <span asp-validation-for="Ans_From_Student" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Question_No</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Question_No" placeholder="Question_No">
+                                            <span asp-validation-for="Question_No" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Question_Batch_No</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="Question_Batch_No" placeholder="Question_Batch_No">
+                                            <span asp-validation-for="Question_Batch_No" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">RegNumber</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" asp-for="RegNumber" placeholder="RegNumber">
+                                            <span asp-validation-for="RegNumber" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-4 d-flex align-items-end">
+                                    <div class="form-group row">
+                                        <button type="submit" class="btn btn-primary ml-2">Delete Logs</button>
+
+                                    </div>
+                                </div>
+                                @if (ViewBag != null)
+                                {
+                                    <partial name="~/Views/Partials/_Alert.cshtml" />
+                                }
+
+                            </div>
+                        </form>
+
+                    </div><!--end card-body-->
+                </div><!--end card-->
+            </div><!--end col-->
+        </div><!--end row-->
+
+    </div><!-- container -->
+
+    <partial name="~/Views/Partials/_Footer.cshtml" />
+</div>
+<!-- end page content -->

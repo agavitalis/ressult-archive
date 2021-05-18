@@ -1,0 +1,61 @@
+﻿@using ResultArchive.Utility
+
+<div class="left-sidenav">
+
+    <ul class="metismenu left-sidenav-menu" id="side-nav">
+
+        <li class="menu-title">Main</li>
+
+        <li>
+            <a href="/Dashboard/Dashboard"><i class="mdi mdi-monitor"></i><span>Dashboard</span><span class="badge badge-danger badge-pill float-right">*</span></a>
+
+        </li>
+
+        <li>
+            <a href="javascript: void(0);"><i class="mdi mdi-apps"></i><span>Results</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+            <ul class="nav-second-level" aria-expanded="false">
+                <li><a href="/Results/Create"><span>Upload Results</span></a></li>
+                <li><a href="/Results/Index"><span>Manage Results</span></a></li>
+
+            </ul>
+        </li>
+
+        <li>
+            <a href="javascript: void(0);"><i class="mdi mdi-ballot-recount"></i><span>Exam Logs</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+            <ul class="nav-second-level" aria-expanded="false">
+                <li><a href="/ExamLog/Index"><span>Manage Logs</span></a></li>
+                <li><a href="/ExamLog/LogSearch"><span>View Student Logs</span></a></li>
+            </ul>
+        </li>
+
+
+        <li class="menu-title">Settings</li>
+        <li>
+            <a href="javascript: void(0);"><i class="mdi mdi-map"></i><span>Sessions</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+            <ul class="nav-second-level" aria-expanded="false">
+                <li><a href="/Sessions/Create">Create Session</a></li>
+                <li><a href="/Sessions/Index">Manage Session</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="javascript: void(0);"><i class="mdi mdi-library"></i><span>Schools</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+            <ul class="nav-second-level" aria-expanded="false">
+                <li><a href="/Schools/Create">Create School</a></li>
+                <li><a href="/Schools/Index">Manage School</a></li>
+            </ul>
+        </li>
+        @if (User.IsInRole(SD.SuperAdminEndUser))
+        {
+            <li class="menu-title">Auth</li>
+            <li>
+                <a href="javascript: void(0);"><i class="mdi mdi-account-multiple"></i><span>Users</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                <ul class="nav-second-level" aria-expanded="false">
+                    <li><a href="/Users/Create">Add User</a></li>
+                    <li><a href="/Users/Index">Manage Users</a></li>
+                </ul>
+            </li>
+        }
+
+    </ul>
+</div>

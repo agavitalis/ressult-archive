@@ -1,0 +1,76 @@
+﻿@model ResultArchive.Models.ApplicationUser
+
+@section LeftSidebar {
+    <partial name="~/Views/Partials/_Sidebar.cshtml" />
+}
+<!-- Page Content-->
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="mt-0 header-title">Edit User</h4>
+                        <p class="text-muted mb-4">
+                            Here you edit <code class="highlighter-rouge">Users</code> registered in the system.
+                        </p>
+
+                        <form method="post">
+                            <div class="row">
+                                <input type="hidden" asp-for="Id" />
+                                <div class="col-lg-8">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">FirstName</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" required asp-for="FirstName" placeholder="First Name">
+                                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">LastName</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" required asp-for="LastName" placeholder="Last Name">
+                                            <span asp-validation-for="LastName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">OtherName</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" required asp-for="OtherNames" placeholder="Other Name">
+                                            <span asp-validation-for="OtherNames" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-sm-4 col-form-label text-right">Email</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text" required asp-for="Email" placeholder="Email">
+                                            <span asp-validation-for="Email" class="text-danger"></span>
+                                        </div>
+                                    </div>  
+
+                                </div>
+
+                                <div class="col-lg-4 d-flex align-items-end">
+                                    <div class="form-group row">
+                                        <button type="submit" class="btn btn-primary ml-2">Edit User</button>
+
+                                    </div>
+                                </div>  
+                                @if (ViewBag != null)  
+                                {
+                                    <partial name="~/Views/Partials/_Alert.cshtml" />
+                                }
+
+                            </div>
+                        </form>
+
+                    </div><!--end card-body-->
+                </div><!--end card-->
+            </div><!--end col-->
+        </div><!--end row-->
+
+    </div><!-- container -->
+
+    <partial name="~/Views/Partials/_Footer.cshtml" />
+</div>
+<!-- end page content -->

@@ -1,0 +1,106 @@
+﻿@model ResultArchive.ViewModels.AddResultViewModel  
+@section LeftSidebar {
+    <partial name="~/Views/Partials/_Sidebar.cshtml" />
+}
+<!-- Page Content-->
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="mt-0 header-title">Upload a Result</h4>
+                        <p class="text-muted mb-4">
+                            Here you are to upload <code class="highlighter-rouge">Results</code> corresponding to the parameters selected below
+                        </p>
+                        <form method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-lg-8">
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label text-right">Select School</label>
+                                        <div class="col-sm-10">
+                                            <select class="custom-select" name="school">
+                                                <option selected="">Choose School</option>
+                                                @foreach (var school in Model.Schools)
+                                                {
+                                                    <option value="@school.Id">@school.Name</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label text-right">Select Session</label>
+                                        <div class="col-sm-10">
+                                            <select class="custom-select" name="session">
+                                                <option selected="">Choose Session</option>
+                                                @foreach (var session in Model.Sessions)
+                                                {
+                                                    <option value="@session.Id">@session.Name</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label text-right">Select Session</label>
+                                        <div class="col-sm-10">
+                                            <select class="custom-select" name="semester">
+                                                <option selected="">Choose Semester</option>
+
+                                                <option value="1">First Semester</option>
+                                                <option value="2">Second Semester</option>
+                                                <option value="3">Third Semester</option>
+                                                <option value="4">Fourth Semester</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group row">
+                                        <label for="result" class="col-sm-2 col-form-label text-right">Choose Upload File</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="file" accept=".xls,.xlsx" name="resultExcel">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="col-lg-4 align-items-end">
+
+                                    <div class="form-group row px-5">
+                                        <button type="submit" class="btn btn-info  btn-block"> Upload Results</button>
+                                    </div>
+
+
+
+
+                                </div>
+                                @if (ViewBag != null)
+                                {
+                                    <partial name="~/Views/Partials/_Alert.cshtml" />
+                                }
+
+                            </div>
+                        </form>
+                        <hr />
+                        <div class="form-group row px-3">
+                            <a class="btn btn-primary btn-block" href="/Results/DownloadSampleExcel"> Download Sample Upload File </a>
+                        </div>
+
+                    </div><!--end card-body-->
+                </div><!--end card-->
+            </div><!--end col-->
+        </div><!--end row-->
+
+
+
+    </div><!-- container -->
+
+    <partial name="~/Views/Partials/_Footer.cshtml" />
+</div>
+<!-- end page content -->
